@@ -1,0 +1,22 @@
+/* Simple responsive styles for the art site */
+:root{--accent:#2b7a78;--muted:#666}
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial,Helvetica,sans-serif;line-height:1.5;margin:0;color:#111}
+.container{max-width:980px;margin:0 auto;padding:20px}
+.site-header{background:var(--accent);color:#fff}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.site-header h1{font-size:1.25rem;margin:12px 0}
+.site-header nav a{color:#e6f6f5;margin-left:12px;text-decoration:none}
+.hero{padding:28px 0}
+.featured .grid{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.featured li{background:#fff;border:1px solid #eee;padding:10px;border-radius:6px}
+.featured img{width:100%;height:140px;object-fit:cover;border-radius:4px}
+.about{margin-top:20px;padding:12px;background:#f7f7f7;border-radius:6px}
+.site-footer{border-top:1px solid #eee;padding:12px;margin-top:24px;color:var(--muted)}
+@media (max-width:520px){.site-header .container{flex-direction:column;align-items:flex-start}.site-header nav{margin-top:8px}}
+
+.page-hero{display:flex;gap:20px;align-items:flex-start}
+.page-hero img{max-width:320px;width:100%;height:auto;border-radius:6px}
+.content h2{margin-top:0}
+.tags{color:var(--muted);font-size:0.9rem}
+.notes{font-size:0.95rem;color:var(--muted);margin-top:18px}
