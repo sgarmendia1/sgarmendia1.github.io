@@ -20,3 +20,48 @@ body{font-family:Segoe UI,Arial,Helvetica,sans-serif;line-height:1.5;margin:0;co
 .content h2{margin-top:0}
 .tags{color:var(--muted);font-size:0.9rem}
 .notes{font-size:0.95rem;color:var(--muted);margin-top:18px}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  margin: 4px 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
