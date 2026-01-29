@@ -6,16 +6,25 @@
 		<title>Important Art of the 21st Century</title>
 		<link rel="stylesheet" href="styles.css">
 	</head>
+	<script>
+  const burger = document.querySelector(".burger");
+  const navLinks = document.getElementById("navLinks");
+
+  burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    const expanded = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", String(!expanded));
+  });
+</script>
+
 	<body>
 		<header class="site-header">
 			<div class="container">
 				<h1>Important Art of the 21st Century</h1>
-				<nav class="nav">
-  <div class="burger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+				<nav class="site-nav">
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
 
   <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
@@ -25,6 +34,7 @@
     <a href="pages/beeple.html">Beeple</a>
   </div>
 </nav>
+
 
 			</div>
 		</header>
